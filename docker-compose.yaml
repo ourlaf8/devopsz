@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  app:
+    image: ${IMAGE_REGISTRY}
+    restart: unless-stopped
+    env_file: .env
+    container_name: ${CI_PROJECT_NAME}
+    ports:
+      - "${PORT1}:${PORT1}"
+      - "${PORT2}:${PORT2}"
+    networks:
+      - bpay-be-network
+
+networks:
+  bpay-be-network:
+    external: true
+
+  network-pg:
+    external: true

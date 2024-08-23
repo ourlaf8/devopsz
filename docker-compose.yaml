@@ -11,10 +11,11 @@ services:
       - "${PORT2}:${PORT2}"
     networks:
       - bpay-be-network
-
+      - bpay-infra-network
+      
 networks:
   bpay-be-network:
     external: true
 
-  network-pg:
+  bpay-infra-network:
     external: true

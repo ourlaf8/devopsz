@@ -5,8 +5,8 @@ stages:
 - deploy
 
 variables:
-  PORT1: 8000
-  PORT2: 8001
+  PORT1: 3001
+  PORT2: 50051
 
 job_prepare:
   stage: preparation

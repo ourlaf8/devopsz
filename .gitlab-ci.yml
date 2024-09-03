@@ -59,14 +59,14 @@ job_release_production:
 job_deploy_staging:
   stage: deploy
   script:
-  - zdDeploy ${CI_PROJECT_NAME} ${CI_COMMIT_SHA} ${PORT1} ${PORT2}
+  - zdhInstall ${CI_PROJECT_NAME} ${CI_COMMIT_SHA} ${PORT1} ${PORT2}
   rules:
   - if: '$CI_COMMIT_BRANCH == "main"'
 
 job_deploy_production:
   stage: deploy
   script:
-  - zdDeploy ${CI_PROJECT_NAME} ${CI_COMMIT_TAG} ${PORT1} ${PORT2}
+  - zhInstall ${CI_PROJECT_NAME} ${CI_COMMIT_TAG} ${PORT1} ${PORT2}
   rules:
   - if: '$CI_COMMIT_TAG != null'
 

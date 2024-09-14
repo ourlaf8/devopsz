@@ -1,0 +1,7 @@
+{
+    "SERVICE_NAME": "service_name",
+    "DEPLOYMENT": "service_name",
+    "PROJECT": "project_name",
+    "PORT": "80",
+    "CHARTNAME": "chartgov2"
+}
